@@ -1,0 +1,11 @@
+state: enabled
+email: jovaniedelacruz@gmail.com
+fullname: 'Jovanie De La Cruz'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$RhwEr7yCSUvGLxjYOqP.ROZ.qYenvDngCPVvkWCEM31aYGeNqvbNK

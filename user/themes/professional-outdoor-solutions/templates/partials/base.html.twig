@@ -1,0 +1,103 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'partials/metadata.html.twig' %}
+
+  <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+  <link rel="canonical" href="{{ page.url(true, true) }}" />
+  {% endblock head %}
+
+  {% block stylesheets %}
+  {% do assets.addCss('theme://css/reset.css', 98) %}
+  {% do assets.addCss('theme://scss/theme.min.css', 98) %}
+  {% do assets.addCss('theme://scss/progress.min.css', 98) %}
+  {% endblock %}
+
+  {% block javascripts %}
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  {% do assets.addJs('jquery', 100) %}
+  {% endblock %}
+
+  {% block assets deferred %}
+  {{ assets.css()|raw }}
+  {{ assets.js()|raw }}
+  {% endblock %}
+
+</head>
+
+<body id="top" class="{{ page.header.body_classes }}">
+
+  {% block header %}
+  <div class="header">
+    <div class="header__wrapper">
+      {% include 'partials/logo.html.twig' %}
+      <div class="header__wrapper__button">
+        <a href="#" class="header__wrapper__button_icon"><i class="fas fa-bars"></i></a>
+      </div>
+      {% block header_navigation %}
+      <nav class="header__wrapper__nav">
+        {% include 'partials/navigation.html.twig' %}
+      </nav>
+      {% endblock %}
+    </div>
+  </div>
+  {% endblock %}
+  <script>
+  $(document).ready(function () {
+
+    $(".header__wrapper__button_icon").click(function () {
+      if ($("nav ul").hasClass('hidden')) {
+        $("nav ul").slideDown();
+        $("nav ul").removeClass('hidden');
+      } else {
+        $("nav ul").slideUp();
+        $("nav ul").addClass('hidden');
+      }
+    });
+    if ($(window).width() <= 751) {
+      $("nav ul").addClass('hidden');
+    } else {
+      $("nav ul").removeClass('hidden');
+    }
+
+  });
+  $(window).resize(function() {
+    if ($(window).width() <= 751) {
+      $("nav ul").hide();
+      $("nav ul").addClass('hidden');
+    } else {
+      $("nav ul").show();
+      $("nav ul").removeClass('hidden');
+    }
+  });
+</script>
+
+  {% block body %}
+  <section id="body">
+    <div class="wrapper padding">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </section>
+  {% endblock %}
+
+  {% block footer %}
+  <div class="footer text-center">
+    <div class="wrapper padding">
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block bottom %}
+  {{ assets.js('bottom')|raw }}
+  {% endblock %}
+
+</body>
