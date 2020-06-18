@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/admin/languages/zh-tw.yaml',
-    'modified' => 1586072491,
+    'modified' => 1592449335,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => '這是 Beta 版！如果要用在營運中請自行承擔風險…',

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/admin/languages/lt.yaml',
-    'modified' => 1586072491,
+    'modified' => 1592449334,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Tai Grav administravimo įskiepio beta versija! Naudokite atsargiai...',

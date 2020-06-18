@@ -30,7 +30,7 @@ class __TwigTemplate_f3e8d8dec2db4af8a86a6ebab064b311c8f17f38fdc337e1dd5a3420bd5
         $context["user_avatar"] = $this->getAttribute($this->getAttribute(($context["admin"] ?? null), "user", []), "getAvatarUrl", [], "method");
         // line 2
         echo "<img src=\"";
-        echo twig_escape_filter($this->env, ((!twig_in_filter("?", ($context["user_avatar"] ?? null))) ? ((($context["user_avatar"] ?? null) . "?s=80")) : (($context["user_avatar"] ?? null))), "html", null, true);
+        echo twig_escape_filter($this->env, (((!twig_in_filter("?", ($context["user_avatar"] ?? null)) && (is_string($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 =  !($context["user_avatar"] ?? null)) && is_string($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = "data:") && ('' === $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 || 0 === strpos($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4, $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144))))) ? ((($context["user_avatar"] ?? null) . "?s=80")) : (($context["user_avatar"] ?? null))), "html", null, true);
         echo "\" />
 ";
     }
@@ -61,7 +61,7 @@ class __TwigTemplate_f3e8d8dec2db4af8a86a6ebab064b311c8f17f38fdc337e1dd5a3420bd5
     public function getSourceContext()
     {
         return new Source("{% set user_avatar = admin.user.getAvatarUrl() %}
-<img src=\"{{ '?' not in user_avatar ? user_avatar ~ '?s=80' : user_avatar }}\" />
+<img src=\"{{ ('?' not in user_avatar) and (not user_avatar starts with 'data:') ? user_avatar ~ '?s=80' : user_avatar }}\" />
 ", "partials/nav-user-avatar.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-user-avatar.html.twig");
     }
 }

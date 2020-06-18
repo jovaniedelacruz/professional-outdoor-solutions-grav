@@ -2,9 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/data/feed/324769e07f4f0b4096b6c6b2c93980c7.yaml',
-    'modified' => 1592436266,
+    'modified' => 1592448884,
     'data' => [
-        'last_checked' => 1592436266,
+        'last_checked' => 1592448884,
         'data' => [
             0 => [
                 'title' => 'Grav 1.7 RC.1 Released',

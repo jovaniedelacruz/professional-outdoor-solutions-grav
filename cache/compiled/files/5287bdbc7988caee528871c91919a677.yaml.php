@@ -2,10 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/admin/blueprints.yaml',
-    'modified' => 1586072483,
+    'modified' => 1592449334,
     'data' => [
         'name' => 'Admin Panel',
-        'version' => '1.9.13',
+        'slug' => 'admin',
+        'type' => 'plugin',
+        'version' => '1.9.15',
         'testing' => false,
         'description' => 'Adds an advanced administration panel to manage your site',
         'icon' => 'empire',

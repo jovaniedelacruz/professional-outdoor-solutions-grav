@@ -2,10 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/email/blueprints.yaml',
-    'modified' => 1586072470,
+    'modified' => 1592449360,
     'data' => [
         'name' => 'Email',
-        'version' => '3.0.7',
+        'slug' => 'email',
+        'type' => 'plugin',
+        'version' => '3.0.9',
         'testing' => false,
         'description' => 'Enables the emailing system for Grav',
         'icon' => 'envelope',
@@ -191,13 +193,13 @@ return [
                 'mailer.smtp.user' => [
                     'type' => 'text',
                     'size' => 'medium',
-                    'autocomplete' => 'nope',
+                    'autocomplete' => 'off',
                     'label' => 'PLUGIN_EMAIL.SMTP_LOGIN_NAME'
                 ],
                 'mailer.smtp.password' => [
                     'type' => 'password',
                     'size' => 'medium',
-                    'autocomplete' => 'nope',
+                    'autocomplete' => 'new-password',
                     'label' => 'PLUGIN_EMAIL.SMTP_PASSWORD'
                 ],
                 'sendmail_config' => [

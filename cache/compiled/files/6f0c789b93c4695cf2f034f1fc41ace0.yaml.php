@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/email/languages.yaml',
-    'modified' => 1586072470,
+    'modified' => 1592449360,
     'data' => [
         'en' => [
             'PLUGIN_EMAIL' => [

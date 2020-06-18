@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1592436697,
-    'checksum' => '90e1954bf5ed71c76d341b934e626afc',
+    'timestamp' => 1592449519,
+    'checksum' => '052b2ab6bf5bdab33e6c74a02841f7d9',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -12,6 +12,10 @@ return [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1586073523
+            ],
+            'plugins/login' => [
+                'file' => 'user/config/plugins/login.yaml',
+                'modified' => 1592449519
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
@@ -31,7 +35,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1592436692
+                'modified' => 1592449171
             ]
         ],
         'system/config' => [
@@ -63,7 +67,11 @@ return [
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1586072482
+                'modified' => 1592449334
+            ],
+            'plugins/admin-addon-user-manager' => [
+                'file' => 'user/plugins/admin-addon-user-manager/admin-addon-user-manager.yaml',
+                'modified' => 1592449378
             ],
             'plugins/bootstrapper' => [
                 'file' => 'user/plugins/bootstrapper/bootstrapper.yaml',
@@ -75,7 +83,7 @@ return [
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1586072470
+                'modified' => 1592449360
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
@@ -83,11 +91,11 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1586072460
+                'modified' => 1592449348
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1586072463
+                'modified' => 1592449353
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
@@ -164,6 +172,13 @@ return [
                         'monthly' => 12,
                         'visitors' => 20
                     ]
+                ]
+            ],
+            'admin-addon-user-manager' => [
+                'enabled' => true,
+                'default_list_style' => 'list',
+                'pagination' => [
+                    'per_page' => 20
                 ]
             ],
             'bootstrapper' => [
@@ -243,10 +258,13 @@ return [
             'login' => [
                 'enabled' => true,
                 'built_in_css' => true,
-                'route' => NULL,
-                'redirect_to_login' => true,
-                'redirect_after_login' => NULL,
-                'redirect_after_logout' => '/',
+                'redirect_to_login' => false,
+                'redirect_after_login' => false,
+                'redirect_after_logout' => true,
+                'session_user_sync' => false,
+                'route' => '/login',
+                'route_after_login' => '/',
+                'route_after_logout' => '/',
                 'route_activate' => '/activate_user',
                 'route_forgot' => '/forgot_password',
                 'route_reset' => '/reset_password',
@@ -263,9 +281,9 @@ return [
                     'name' => 'grav-rememberme'
                 ],
                 'max_pw_resets_count' => 2,
-                'max_pw_resets_interval' => 60,
-                'max_login_count' => 5,
-                'max_login_interval' => 10,
+                'max_pw_resets_interval' => 30,
+                'max_login_count' => 10,
+                'max_login_interval' => 1,
                 'ipv6_subnet_size' => 64,
                 'user_registration' => [
                     'enabled' => false,
@@ -286,8 +304,8 @@ return [
                             'login' => 'true'
                         ]
                     ],
-                    'redirect_after_registration' => '',
-                    'redirect_after_activation' => '',
+                    'redirect_after_registration' => NULL,
+                    'redirect_after_activation' => NULL,
                     'options' => [
                         'validate_password1_and_password2' => true,
                         'set_user_disabled' => false,

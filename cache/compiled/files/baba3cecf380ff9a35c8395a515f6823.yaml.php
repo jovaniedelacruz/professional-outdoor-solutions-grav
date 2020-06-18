@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/admin/admin.yaml',
-    'modified' => 1586072482,
+    'modified' => 1592449334,
     'data' => [
         'enabled' => true,
         'route' => '/admin',

@@ -2,10 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/login/blueprints.yaml',
-    'modified' => 1586072463,
+    'modified' => 1592449352,
     'data' => [
         'name' => 'Login',
-        'version' => '3.1.0',
+        'slug' => 'login',
+        'type' => 'plugin',
+        'version' => '3.3.5',
         'testing' => false,
         'description' => 'Enables user authentication and login screen.',
         'icon' => 'sign-in',
@@ -40,9 +42,9 @@ return [
                     'active' => 1,
                     'class' => 'subtle',
                     'fields' => [
-                        'login' => [
+                        'options' => [
                             'type' => 'tab',
-                            'title' => 'PLUGIN_LOGIN.BTN_LOGIN',
+                            'title' => 'PLUGIN_LOGIN.OPTIONS',
                             'fields' => [
                                 'enabled' => [
                                     'type' => 'hidden',
@@ -71,47 +73,54 @@ return [
                                         'type' => 'bool'
                                     ]
                                 ],
-                                'route' => [
-                                    'type' => 'text',
-                                    'size' => 'medium',
-                                    'label' => 'PLUGIN_LOGIN.ROUTE',
-                                    'help' => 'PLUGIN_LOGIN.ROUTE_HELP',
-                                    'placeholder' => '/my-custom-login'
+                                'redirect_to_login' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_LOGIN.REDIRECT_TO_LOGIN',
+                                    'help' => 'PLUGIN_LOGIN.REDIRECT_TO_LOGIN_HELP',
+                                    'default' => 0,
+                                    'highlight' => 0,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
                                 ],
                                 'redirect_after_login' => [
-                                    'type' => 'text',
+                                    'type' => 'toggle',
                                     'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGIN',
                                     'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGIN_HELP',
-                                    'placeholder' => '/my-page'
+                                    'force_bool' => true,
+                                    'default' => 0,
+                                    'highlight' => 0,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
                                 ],
                                 'redirect_after_logout' => [
-                                    'type' => 'text',
+                                    'type' => 'toggle',
                                     'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGOUT',
                                     'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGOUT_HELP',
-                                    'placeholder' => '/'
-                                ],
-                                'route_forgot' => [
-                                    'type' => 'text',
-                                    'size' => 'medium',
-                                    'label' => 'PLUGIN_LOGIN.ROUTE_FORGOT',
-                                    'placeholder' => '/forgot_password'
-                                ],
-                                'route_reset' => [
-                                    'type' => 'text',
-                                    'size' => 'medium',
-                                    'label' => 'PLUGIN_LOGIN.ROUTE_RESET',
-                                    'placeholder' => '/reset_password'
-                                ],
-                                'route_profile' => [
-                                    'type' => 'text',
-                                    'size' => 'medium',
-                                    'label' => 'PLUGIN_LOGIN.ROUTE_PROFILE',
-                                    'placeholder' => '/user_profile'
+                                    'force_bool' => true,
+                                    'default' => 1,
+                                    'highlight' => 1,
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
+                                    ]
                                 ],
                                 'parent_acl' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_LOGIN.USE_PARENT_ACL_LABEL',
-                                    'highlight' => 1,
+                                    'highlight' => 0,
                                     'default' => 0,
                                     'help' => 'PLUGIN_LOGIN.USE_PARENT_ACL_HELP',
                                     'options' => [
@@ -153,7 +162,7 @@ return [
                                 'protect_protected_page_media' => [
                                     'type' => 'toggle',
                                     'label' => 'PLUGIN_LOGIN.PROTECT_PROTECTED_PAGE_MEDIA_LABEL',
-                                    'highlight' => 1,
+                                    'highlight' => 0,
                                     'default' => 0,
                                     'help' => 'PLUGIN_LOGIN.PROTECT_PROTECTED_PAGE_MEDIA_HELP',
                                     'options' => [
@@ -164,53 +173,18 @@ return [
                                         'type' => 'bool'
                                     ]
                                 ],
-                                'routes' => [
-                                    'type' => 'section',
-                                    'title' => 'PLUGIN_LOGIN.ROUTES',
-                                    'fields' => [
-                                        'route_activate' => [
-                                            'type' => 'text',
-                                            'size' => 'medium',
-                                            'label' => 'PLUGIN_LOGIN.ROUTE_ACTIVATE',
-                                            'placeholder' => '/activate_user'
-                                        ],
-                                        'route_forgot' => [
-                                            'type' => 'text',
-                                            'size' => 'medium',
-                                            'label' => 'PLUGIN_LOGIN.ROUTE_FORGOT',
-                                            'placeholder' => '/forgot_password'
-                                        ],
-                                        'route_reset' => [
-                                            'type' => 'text',
-                                            'size' => 'medium',
-                                            'label' => 'PLUGIN_LOGIN.ROUTE_RESET',
-                                            'placeholder' => '/reset_password'
-                                        ],
-                                        'route_profile' => [
-                                            'type' => 'text',
-                                            'size' => 'medium',
-                                            'label' => 'PLUGIN_LOGIN.ROUTE_PROFILE',
-                                            'placeholder' => '/user_profile'
-                                        ],
-                                        'route_register' => [
-                                            'type' => 'text',
-                                            'size' => 'medium',
-                                            'label' => 'PLUGIN_LOGIN.ROUTE_REGISTER',
-                                            'help' => 'PLUGIN_LOGIN.ROUTE_REGISTER_HELP',
-                                            'placeholder' => '/register'
-                                        ],
-                                        'user_registration.redirect_after_registration' => [
-                                            'type' => 'text',
-                                            'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION',
-                                            'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION_HELP',
-                                            'placeholder' => '/page-to-show-after-registration'
-                                        ],
-                                        'user_registration.redirect_after_activation' => [
-                                            'type' => 'text',
-                                            'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION',
-                                            'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION_HELP',
-                                            'placeholder' => '/page-to-show-after-activation'
-                                        ]
+                                'session_user_sync' => [
+                                    'type' => 'toggle',
+                                    'label' => 'PLUGIN_LOGIN.SESSION_USER_SYNC',
+                                    'highlight' => 0,
+                                    'default' => 0,
+                                    'help' => 'PLUGIN_LOGIN.SESSION_USER_SYNC_HELP',
+                                    'options' => [
+                                        1 => 'PLUGIN_ADMIN.ENABLED',
+                                        0 => 'PLUGIN_ADMIN.DISABLED'
+                                    ],
+                                    'validate' => [
+                                        'type' => 'bool'
                                     ]
                                 ],
                                 'rememberme' => [
@@ -248,6 +222,80 @@ return [
                                             'help' => 'PLUGIN_ADMIN.SESSION_NAME_HELP'
                                         ]
                                     ]
+                                ]
+                            ]
+                        ],
+                        'routes' => [
+                            'type' => 'tab',
+                            'title' => 'PLUGIN_LOGIN.ROUTES',
+                            'fields' => [
+                                'route' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE',
+                                    'help' => 'PLUGIN_LOGIN.ROUTE_HELP',
+                                    'placeholder' => '/login'
+                                ],
+                                'route_after_login' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_AFTER_LOGIN',
+                                    'help' => 'PLUGIN_LOGIN.ROUTE_AFTER_LOGIN_HELP',
+                                    'data-default@' => '\\Grav\\Plugin\\LoginPlugin::defaultRedirectAfterLogin',
+                                    'placeholder' => '/user_profile'
+                                ],
+                                'route_after_logout' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_AFTER_LOGOUT',
+                                    'help' => 'PLUGIN_LOGIN.ROUTE_AFTER_LOGOUT_HELP',
+                                    'data-default@' => '\\Grav\\Plugin\\LoginPlugin::defaultRedirectAfterLogout',
+                                    'placeholder' => '/'
+                                ],
+                                'route_forgot' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_FORGOT',
+                                    'placeholder' => '/forgot_password'
+                                ],
+                                'route_reset' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_RESET',
+                                    'placeholder' => '/reset_password'
+                                ],
+                                'route_profile' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_PROFILE',
+                                    'placeholder' => '/user_profile'
+                                ],
+                                'route_activate' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_ACTIVATE',
+                                    'placeholder' => '/activate_user'
+                                ],
+                                'user_registration.redirect_after_activation' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION',
+                                    'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_ACTIVATION_HELP',
+                                    'placeholder' => '/page-to-show-after-activation'
+                                ],
+                                'route_register' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.ROUTE_REGISTER',
+                                    'help' => 'PLUGIN_LOGIN.ROUTE_REGISTER_HELP',
+                                    'placeholder' => '/register'
+                                ],
+                                'user_registration.redirect_after_registration' => [
+                                    'type' => 'text',
+                                    'size' => 'medium',
+                                    'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION',
+                                    'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION_HELP',
+                                    'placeholder' => '/page-to-show-after-registration'
                                 ]
                             ]
                         ],

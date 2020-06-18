@@ -2,10 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/form/blueprints.yaml',
-    'modified' => 1586072460,
+    'modified' => 1592449348,
     'data' => [
         'name' => 'Form',
-        'version' => '4.0.6',
+        'slug' => 'form',
+        'type' => 'plugin',
+        'version' => '4.0.10',
         'testing' => false,
         'description' => 'Enables the forms handling',
         'icon' => 'check-square',

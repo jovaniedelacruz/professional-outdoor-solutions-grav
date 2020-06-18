@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/Users/Jovanie/Documents/GitHub/professional-outdoor-solutions-grav/user/plugins/admin/blueprints/config/media.yaml',
-    'modified' => 1586072492,
+    'modified' => 1592449334,
     'data' => [
         'title' => 'PLUGIN_ADMIN.MEDIA',
         'form' => [

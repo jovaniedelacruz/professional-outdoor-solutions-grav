@@ -76,7 +76,7 @@ class __TwigTemplate_57de25e8cb9bda2d871173ae9fbd726feddd2205a4d5b2866d8abed24cf
             echo "
         ";
             // line 18
-            $context["id"] = (((($this->getAttribute(($context["field"] ?? null), "id", [], "any", true, true)) ? (_twig_default_filter($this->getAttribute(($context["field"] ?? null), "id", []), $this->getAttribute(($context["field"] ?? null), "name", []))) : ($this->getAttribute(($context["field"] ?? null), "name", []))) . "-") . $context["key"]);
+            $context["id"] = (($this->env->getExtension('Grav\Common\Twig\TwigExtension')->inflectorFilter("hyphen", (($this->getAttribute(($context["field"] ?? null), "id", [], "any", true, true)) ? (_twig_default_filter($this->getAttribute(($context["field"] ?? null), "id", []), $this->getAttribute(($context["field"] ?? null), "name", []))) : ($this->getAttribute(($context["field"] ?? null), "name", [])))) . "-") . $context["key"]);
             // line 19
             echo "        ";
             $context["name"] = ((($this->getAttribute(($context["field"] ?? null), "use", []) == "keys")) ? ($context["key"]) : (($context["id"] ?? null)));
@@ -203,7 +203,7 @@ class __TwigTemplate_57de25e8cb9bda2d871173ae9fbd726feddd2205a4d5b2866d8abed24cf
 {% block input %}
     {% for key, text in field.options %}
 
-        {% set id = field.id|default(field.name) ~ '-' ~ key %}
+        {% set id = field.id|default(field.name)|hyphenize ~ '-' ~ key %}
         {% set name = field.use == 'keys' ? key : id %}
         {% set val = field.use == 'keys' ? '1' : key %}
         {% set checked = (field.use == 'keys' ? value[key] : key in value) %}
