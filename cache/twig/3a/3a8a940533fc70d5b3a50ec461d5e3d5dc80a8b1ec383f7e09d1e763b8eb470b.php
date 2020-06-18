@@ -55,19 +55,19 @@ class __TwigTemplate_be85371adcb5170dd679c025c65579892ec64070ef6c236c34dbc2bff59
                 echo "    ";
                 if (($this->getAttribute($this->getAttribute($this->getAttribute($context["p"], "children", []), "visible", []), "count", []) > 0)) {
                     // line 6
-                    echo "      <li>
-        <a href=\"";
+                    echo "      <li class=\"header__nav__list__sublist\">
+        <a class=\"header__nav__list__sublist__entry ";
                     // line 7
-                    echo $this->getAttribute($context["p"], "url", []);
-                    echo "\" class=\"";
                     echo ($context["active_page"] ?? null);
+                    echo "\" href=\"";
+                    echo $this->getAttribute($context["p"], "url", []);
                     echo "\">
           ";
                     // line 8
                     echo $this->getAttribute($context["p"], "menu", []);
                     echo "
         </a>
-        <ul>
+        <ul class=\"header__nav__list__sublist__list\">
           ";
                     // line 11
                     echo $context["macros"]->getnav_loop($context["p"]);
@@ -77,12 +77,12 @@ class __TwigTemplate_be85371adcb5170dd679c025c65579892ec64070ef6c236c34dbc2bff59
     ";
                 } else {
                     // line 15
-                    echo "      <li>
-        <a href=\"";
+                    echo "      <li class=\"header__nav__list__entry\">
+        <a class=\"header__nav__list__entry__link ";
                     // line 16
-                    echo $this->getAttribute($context["p"], "url", []);
-                    echo "\" class=\"";
                     echo ($context["active_page"] ?? null);
+                    echo "\" href=\"";
+                    echo $this->getAttribute($context["p"], "url", []);
                     echo "\">
           ";
                     // line 17
@@ -141,23 +141,23 @@ class __TwigTemplate_be85371adcb5170dd679c025c65579892ec64070ef6c236c34dbc2bff59
   {% for p in page.children.visible %}
     {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
     {% if p.children.visible.count > 0 %}
-      <li>
-        <a href=\"{{ p.url }}\" class=\"{{ active_page }}\">
+      <li class=\"header__nav__list__sublist\">
+        <a class=\"header__nav__list__sublist__entry {{ active_page }}\" href=\"{{ p.url }}\">
           {{ p.menu }}
         </a>
-        <ul>
+        <ul class=\"header__nav__list__sublist__list\">
           {{ macros.nav_loop(p) }}
         </ul>
       </li>
     {% else %}
-      <li>
-        <a href=\"{{ p.url }}\" class=\"{{ active_page }}\">
+      <li class=\"header__nav__list__entry\">
+        <a class=\"header__nav__list__entry__link {{ active_page }}\" href=\"{{ p.url }}\">
           {{ p.menu }}
         </a>
       </li>
     {% endif %}
   {% endfor %}
 {% endmacro %}
-", "macros/macros.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\themes\\professional-outdoor-solutions\\templates\\macros\\macros.html.twig");
+", "macros/macros.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\themes\\professional-outdoor-solutions\\templates\\macros\\macros.html.twig");
     }
 }

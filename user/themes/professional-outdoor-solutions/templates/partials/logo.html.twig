@@ -1,9 +1,10 @@
 {% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
-<a href="{{ home_url }}" class="header__wrapper__logo">
+<a href="{{ home_url }}" class="header__logo">
 {% if logo %}
   {% set logo_file = (logo|first).name %}
-  <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.name }}" />
+  <object type="image/svg+xml" data="{{ url('theme://images/logo/' ~ logo_file)  }}" class="header__logo__img" alt="{{ site.name }}" ></object>
+
 {% else %}
-  <img src="{{ url('theme://images/grav-logo.svg')  }}" alt="{{ site.name }}" />
+  <object type="image/svg+xml" data="{{ url('theme://images/grav-logo.svg')  }}" class="header__logo__img" alt="{{ site.name }}" ></object>
 {% endif %}
 </a>

@@ -75,6 +75,6 @@ class __TwigTemplate_28c682b722b3136999ea420c3767ab75072d0db532383fb97131cdc6003
 {% block content %}
     {{ page.content|raw }}
 {% endblock %}
-", "default.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\themes\\professional-outdoor-solutions\\templates\\default.html.twig");
+", "default.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\themes\\professional-outdoor-solutions\\templates\\default.html.twig");
     }
 }

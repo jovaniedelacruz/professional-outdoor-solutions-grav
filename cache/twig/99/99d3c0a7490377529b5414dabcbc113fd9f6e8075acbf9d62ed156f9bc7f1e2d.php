@@ -92,6 +92,6 @@ class __TwigTemplate_137a27efa035b38e0b210730841139d11d00f7b853c35404bb09f6b27a7
     {
         return new Source("{% for meta in page.metadata %}
     <meta {% if meta.name %}name=\"{{ meta.name }}\" {% endif %}{% if meta.http_equiv %}http-equiv=\"{{ meta.http_equiv }}\" {% endif %}{% if meta.charset %}charset=\"{{ meta.charset }}\" {% endif %}{% if meta.property %}property=\"{{ meta.property }}\" {% endif %}{% if meta.content %}content=\"{{ meta.content }}\" {% endif %}/>
-{% endfor %}", "partials/metadata.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\system\\templates\\partials\\metadata.html.twig");
+{% endfor %}", "partials/metadata.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\system\\templates\\partials\\metadata.html.twig");
     }
 }

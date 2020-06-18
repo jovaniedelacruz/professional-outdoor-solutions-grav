@@ -412,6 +412,6 @@ class __TwigTemplate_8e5d7e496b627a7fd0d3c0e8c027cc672b3ade33168a9bc066f9eec3ba2
         </div>
     </nav>
 {% endif %}
-", "partials/nav.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav.html.twig");
+", "partials/nav.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav.html.twig");
     }
 }

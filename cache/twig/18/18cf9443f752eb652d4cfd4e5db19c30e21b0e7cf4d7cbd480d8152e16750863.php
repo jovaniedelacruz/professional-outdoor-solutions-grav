@@ -47,9 +47,8 @@ class __TwigTemplate_5db8208b28fe21294e0c3cb31c27eaa31448277afabc2c2d2b38157761b
             echo "        <div id=\"";
             echo $this->getAttribute($this->getAttribute($context["module"], "header", []), "anchor", []);
             echo "\"></div>
-
         ";
-            // line 6
+            // line 5
             echo $this->getAttribute($context["module"], "content", []);
             echo "
     ";
@@ -71,7 +70,7 @@ class __TwigTemplate_5db8208b28fe21294e0c3cb31c27eaa31448277afabc2c2d2b38157761b
 
     public function getDebugInfo()
     {
-        return array (  53 => 6,  47 => 4,  42 => 3,  39 => 2,  29 => 1,);
+        return array (  52 => 5,  47 => 4,  42 => 3,  39 => 2,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -88,10 +87,9 @@ class __TwigTemplate_5db8208b28fe21294e0c3cb31c27eaa31448277afabc2c2d2b38157761b
 {% block content %}
     {% for module in page.collection() %}
         <div id=\"{{ module.header.anchor }}\"></div>
-
         {{ module.content }}
     {% endfor %}
 {% endblock %}
-", "home.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\themes\\professional-outdoor-solutions\\templates\\home.html.twig");
+", "home.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\themes\\professional-outdoor-solutions\\templates\\home.html.twig");
     }
 }

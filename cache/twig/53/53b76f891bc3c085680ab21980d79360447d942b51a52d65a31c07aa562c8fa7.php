@@ -62,6 +62,6 @@ class __TwigTemplate_f3e8d8dec2db4af8a86a6ebab064b311c8f17f38fdc337e1dd5a3420bd5
     {
         return new Source("{% set user_avatar = admin.user.getAvatarUrl() %}
 <img src=\"{{ '?' not in user_avatar ? user_avatar ~ '?s=80' : user_avatar }}\" />
-", "partials/nav-user-avatar.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-user-avatar.html.twig");
+", "partials/nav-user-avatar.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-user-avatar.html.twig");
     }
 }

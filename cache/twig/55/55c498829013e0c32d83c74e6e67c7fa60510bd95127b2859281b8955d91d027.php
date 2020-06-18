@@ -91,6 +91,6 @@ class __TwigTemplate_882e4219ab0684eeff36ef69e04cbebd128926a3036542129a2c9119724
             <a class=\"button\" data-leave-action=\"continue\" href=\"#\"><i class=\"fa fa-fw fa-check\"></i> {{ \"PLUGIN_ADMIN.CONTINUE\"|tu }}</a>
         </div>
     </form>
-</div>", "partials/modal-changes-detected.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-changes-detected.html.twig");
+</div>", "partials/modal-changes-detected.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-changes-detected.html.twig");
     }
 }

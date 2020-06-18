@@ -283,6 +283,6 @@ class __TwigTemplate_c40aa04efd6069517cf8f0a0b232622ac3ae0358126905ca9e39dc4a1ac
         </div>
 
     </form>
-</div>", "partials/modal-update-packages.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-update-packages.html.twig");
+</div>", "partials/modal-update-packages.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-update-packages.html.twig");
     }
 }

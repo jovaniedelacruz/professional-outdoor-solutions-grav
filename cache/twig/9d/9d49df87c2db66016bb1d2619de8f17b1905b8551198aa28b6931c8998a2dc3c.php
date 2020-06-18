@@ -114,6 +114,6 @@ class __TwigTemplate_e118c9949202c67acfccf8691e5a6d974dbf6dcb4c391dd06d0d3c55509
         <div class=\"{{ message.scope|e }} alert\">{{ message.message|raw }}</div>
     {%- endfor -%}
 </div>
-", "partials/messages.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\messages.html.twig");
+", "partials/messages.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\messages.html.twig");
     }
 }

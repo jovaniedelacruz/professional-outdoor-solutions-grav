@@ -1,5 +1,48 @@
-{% import 'macros/macros.html.twig' as macros %}
+{% block header %}
+  <div class="header">
+      {% include 'partials/logo.html.twig' %}
+      <div class="header__button">
+        <a href="#" class="header__button__icon">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+      {% block header_navigation %}
+        <nav class="header__nav">
+          {% import 'macros/macros.html.twig' as macros %}
 
-<ul {{ tree ? 'class="tree"' : '' }}>
-    {{ macros.nav_loop(pages) }}
-</ul>
+          <ul class="header__nav__list" {{ tree ? 'class="tree"' : '' }}>
+            {{ macros.nav_loop(pages) }}
+          </ul>
+        </nav>
+      {% endblock %}
+  </div>
+{% endblock %}
+<script>
+  $(document).ready(function() {
+
+    $(".header__button__icon").click(function() {
+      if ($(".header__nav__list").hasClass('header__nav__list--hidden')) {
+        $(".header__nav__list").slideDown();
+        $(".header__nav__list").removeClass('header__nav__list--hidden');
+      } else {
+        $(".header__nav__list").slideUp();
+        $(".header__nav__list").addClass('header__nav__list--hidden');
+      }
+    });
+    if ($(window).width() <= 768) {
+      $(".header__nav__list").addClass('header__nav__list--hidden');
+    } else {
+      $(".header__nav__list").removeClass('header__nav__list--hidden');
+    }
+
+  });
+  $(window).resize(function() {
+    if ($(window).width() <= 751) {
+      $(".header__nav__list").hide();
+      $(".header__nav__list").addClass('header__nav__list--hidden');
+    } else {
+      $(".header__nav__list").show();
+      $(".header__nav__list").removeClass('header__nav__list--hidden');
+    }
+  });
+</script>

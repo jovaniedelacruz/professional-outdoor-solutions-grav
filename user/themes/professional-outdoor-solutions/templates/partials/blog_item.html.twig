@@ -1,0 +1,73 @@
+{% set hero_image = page.header.hero_image ? page.media[page.header.hero_image] : page.media.images|first %}
+
+<div class="articles">
+
+  <div class="article__banner">
+    <img src="{{ hero_image.url }}" class="article__banner__img" alt="">
+  </div>
+  <div class="article__body">
+
+    <div class="article__body__content">
+
+      <h1 class="article__body__content__title">{{ page.title }}</h1>
+      <p class="article__body__content__date">
+        <strong><time class="date" datetime="{{ page.date|date(" c") }}"="c" )=")" }}""="}}" "">
+          <span>{{ page.date|date("d") }}</span>
+          <em>{{ page.date|date("M") }}</em>
+          <em>{{ page.date|date("Y") }}</em>
+        </time></strong>
+      </p>
+      <div class="article__body__content__text">
+        {{ page.content }}
+      </div>
+      <div class="article__body__content__meta">
+        {% if config.plugins.readingtime.enabled %}
+          <span class="reading">{{ page.content|readingtime }}</span>
+        {% endif %}
+
+        {% if page.taxonomy.tag %}
+          <span class="tags">
+            {% for tag in page.taxonomy.tag %}
+              <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="article__body__recent">
+      <div class="">
+        <h1 class="article__body__recent__h1">Recent Posts</h1>
+      </div>
+      <div class="article__body__recent__article">
+        <a href="#">
+          <div class="article__body__recent__article__banner">
+            <img src="https://professionaloutdoorsolutions.xurweb.design/img/jpg/2020-05-06-HGT%20Ridewood%20Generals.jpg" class="article__body__recent__article__banner__img" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <h3 class="article__body__recent__article__title">Grass is now GREENER</h3>
+        </a>
+      </div>
+      <div class="article__body__recent__article">
+        <a href="#">
+          <div class="article__body__recent__article__banner">
+            <img src="https://professionaloutdoorsolutions.xurweb.design/img/opt/il-sadorus/il-village-of-sadorus-01.jpg" class="article__body__recent__article__banner__img" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <h3 class="article__body__recent__article__title">Grass is now GREENER</h3>
+        </a>
+      </div>
+      <div class="article__body__recent__article">
+        <a href="#">
+          <div class="article__body__recent__article__banner">
+            <img src="https://professionaloutdoorsolutions.xurweb.design/img/opt/il-sadorus/il-village-of-sadorus-01.jpg" class="article__body__recent__article__banner__img" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <h3 class="article__body__recent__article__title">Grass is now GREENER</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

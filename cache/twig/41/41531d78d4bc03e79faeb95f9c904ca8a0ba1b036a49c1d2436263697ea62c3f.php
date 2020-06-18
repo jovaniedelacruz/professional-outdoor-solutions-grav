@@ -31,7 +31,7 @@ class __TwigTemplate_6c86453dbe691c25dd7da1abb25c89a11a92bdaa93faae293d8d1b43859
         // line 2
         echo "<a href=\"";
         echo ($context["home_url"] ?? null);
-        echo "\" class=\"header__wrapper__logo\">
+        echo "\" class=\"header__logo\">
 ";
         // line 3
         if (($context["logo"] ?? null)) {
@@ -39,22 +39,23 @@ class __TwigTemplate_6c86453dbe691c25dd7da1abb25c89a11a92bdaa93faae293d8d1b43859
             echo "  ";
             $context["logo_file"] = $this->getAttribute(twig_first($this->env, ($context["logo"] ?? null)), "name", []);
             // line 5
-            echo "  <img src=\"";
+            echo "  <object type=\"image/svg+xml\" data=\"";
             echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc(("theme://images/logo/" . ($context["logo_file"] ?? null)));
-            echo "\" alt=\"";
+            echo "\" class=\"header__logo__img\" alt=\"";
             echo $this->getAttribute(($context["site"] ?? null), "name", []);
-            echo "\" />
+            echo "\" ></object>
+
 ";
         } else {
-            // line 7
-            echo "  <img src=\"";
+            // line 8
+            echo "  <object type=\"image/svg+xml\" data=\"";
             echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("theme://images/grav-logo.svg");
-            echo "\" alt=\"";
+            echo "\" class=\"header__logo__img\" alt=\"";
             echo $this->getAttribute(($context["site"] ?? null), "name", []);
-            echo "\" />
+            echo "\" ></object>
 ";
         }
-        // line 9
+        // line 10
         echo "</a>
 ";
     }
@@ -71,7 +72,7 @@ class __TwigTemplate_6c86453dbe691c25dd7da1abb25c89a11a92bdaa93faae293d8d1b43859
 
     public function getDebugInfo()
     {
-        return array (  58 => 9,  50 => 7,  42 => 5,  39 => 4,  37 => 3,  32 => 2,  30 => 1,);
+        return array (  59 => 10,  51 => 8,  42 => 5,  39 => 4,  37 => 3,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -85,14 +86,15 @@ class __TwigTemplate_6c86453dbe691c25dd7da1abb25c89a11a92bdaa93faae293d8d1b43859
     public function getSourceContext()
     {
         return new Source("{% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
-<a href=\"{{ home_url }}\" class=\"header__wrapper__logo\">
+<a href=\"{{ home_url }}\" class=\"header__logo\">
 {% if logo %}
   {% set logo_file = (logo|first).name %}
-  <img src=\"{{ url('theme://images/logo/' ~ logo_file)  }}\" alt=\"{{ site.name }}\" />
+  <object type=\"image/svg+xml\" data=\"{{ url('theme://images/logo/' ~ logo_file)  }}\" class=\"header__logo__img\" alt=\"{{ site.name }}\" ></object>
+
 {% else %}
-  <img src=\"{{ url('theme://images/grav-logo.svg')  }}\" alt=\"{{ site.name }}\" />
+  <object type=\"image/svg+xml\" data=\"{{ url('theme://images/grav-logo.svg')  }}\" class=\"header__logo__img\" alt=\"{{ site.name }}\" ></object>
 {% endif %}
 </a>
-", "partials/logo.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\themes\\professional-outdoor-solutions\\templates\\partials\\logo.html.twig");
+", "partials/logo.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\themes\\professional-outdoor-solutions\\templates\\partials\\logo.html.twig");
     }
 }

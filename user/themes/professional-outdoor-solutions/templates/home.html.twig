@@ -2,7 +2,6 @@
 {% block content %}
     {% for module in page.collection() %}
         <div id="{{ module.header.anchor }}"></div>
-
         {{ module.content }}
     {% endfor %}
 {% endblock %}

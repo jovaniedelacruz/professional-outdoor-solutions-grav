@@ -324,6 +324,6 @@ class __TwigTemplate_61b304e64ceaebcb70cabc55a2730e7f5a4e3ab232a56fe5398e6ea992f
     {% endfor %}
   </div>
 {% endblock %}
-", "forms/fields/toggle/toggle.html.twig", "C:\\Users\\Jovanie\\Documents\\Git\\Professional-Outdoor-Solutions\\grav\\user\\plugins\\form\\templates\\forms\\fields\\toggle\\toggle.html.twig");
+", "forms/fields/toggle/toggle.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\form\\templates\\forms\\fields\\toggle\\toggle.html.twig");
     }
 }
