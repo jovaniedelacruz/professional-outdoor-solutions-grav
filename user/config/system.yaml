@@ -10,6 +10,11 @@ custom_base_url: null
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 intl_enabled: true
+http_x_forwarded:
+  protocol: true
+  host: false
+  port: true
+  ip: true
 languages:
   supported: null
   default_lang: null
@@ -24,7 +29,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: professional-outdoor-solutions
+  theme: professional-outdoor-solutions-grav-theme
   order:
     by: default
     dir: asc
@@ -33,7 +38,7 @@ pages:
   dateformat:
     default: null
     short: 'F jS \a\t g:ia'
-    long: 'F jS \a\t g:ia'
+    long: 'l jS \of F g:i A'
   publish_dates: true
   process:
     markdown: true
@@ -51,6 +56,12 @@ pages:
     special_chars:
       '>': gt
       '<': lt
+    valid_link_attributes:
+      - rel
+      - target
+      - id
+      - class
+      - classes
   types:
     - html
     - htm
@@ -74,7 +85,7 @@ pages:
     - .git
     - .idea
   ignore_hidden: true
-  hide_empty_folders: null
+  hide_empty_folders: false
   url_taxonomy_filters: true
   frontmatter:
     process_twig: false
@@ -142,7 +153,7 @@ debugger:
   twig: true
 images:
   default_image_quality: 85
-  cache_all: true
+  cache_all: false
   cache_perms: '0755'
   debug: false
   auto_fix_orientation: false

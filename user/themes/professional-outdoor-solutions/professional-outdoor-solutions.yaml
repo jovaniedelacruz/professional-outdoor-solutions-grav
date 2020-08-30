@@ -1,6 +1,0 @@
-enabled: true
-default_lang: en
-custom_logo:
-  - name: 'logo.svg'
-custom_logo_mobile:
-  - name: 'mobile-logo.svg'

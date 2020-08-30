@@ -184,6 +184,6 @@ class __TwigTemplate_bca1e942ccb8b250819e72e9825387de058a1ed2519440d49dff83185bf
         </div>
     </form>
 </div>
-", "partials/modal-remove-package.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-remove-package.html.twig");
+", "partials/modal-remove-package.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-remove-package.html.twig");
     }
 }

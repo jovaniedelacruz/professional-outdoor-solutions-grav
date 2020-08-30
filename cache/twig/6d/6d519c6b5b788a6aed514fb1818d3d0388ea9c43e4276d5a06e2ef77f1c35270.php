@@ -190,6 +190,6 @@ class __TwigTemplate_d5511d232130486ffd9fbd4061a8f952acc5fd884a77bddcecb61e573af
 
 {% endif %}
 {% endblock %}
-", "forms/fields/section/section.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\forms\\fields\\section\\section.html.twig");
+", "forms/fields/section/section.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\forms\\fields\\section\\section.html.twig");
     }
 }

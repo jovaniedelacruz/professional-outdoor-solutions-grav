@@ -1,19 +1,7 @@
-title: 'Professional Outdoor Solutions'
-default_lang: en
+title: Grav
 author:
-  name: 'Jovanie De La Cruz'
-  email: jovaniedelacruz@gmail.com
-taxonomies:
-  - category
-  - tag
+  name: Joe Bloggs
+  email: 'joe@example.com'
 metadata:
-  description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-summary:
-  enabled: true
-  format: short
-  size: 300
-  delimiter: '==='
-redirects: null
-routes: null
-blog:
-  route: /blog
+    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+

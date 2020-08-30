@@ -170,6 +170,6 @@ class __TwigTemplate_95fc5ec42ba283ac4a8f6c97dbfc75c488470fb2c8f1e4ee5f120fa8a21
         </div>
     </form>
 </div>
-", "partials/modal-reinstall-package.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-reinstall-package.html.twig");
+", "partials/modal-reinstall-package.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-reinstall-package.html.twig");
     }
 }

@@ -1,0 +1,126 @@
+1597280596
+a:2:{s:7:"content";s:3452:"<div class="modular-row form ">
+    <h1>Error: Invalid Frontmatter</h1>
+<p>Path: <code>C:/Users/Jovanie/Documents/Web_Development/professional-outdoor-solutions/professional-outdoor-solutions-grav-dev/user/pages/07.contact/_form/form.md</code></p>
+<p><strong>Failed to read C:/Users/Jovanie/Documents/Web_Development/professional-outdoor-solutions/professional-outdoor-solutions-grav-dev/user/pages/07.contact/_form/form.md: You cannot define a sequence item when in a mapping at line 26 (near "- name: email")</strong></p>
+<pre><code>---
+title: A Page with an Example Form
+cache_enable: false
+form:
+    name: contact-form
+    classes: contact_form
+    fields:
+
+      columns:
+        type: columns
+        classes: contact_form__columns
+
+        fields:
+          column1:
+            type: column
+            classes: contact_form__columns__col contact_form__columns__col--first
+            fields:
+              outerclasses: contact_form__columns__col__name
+              id: contact_form__name
+              placeholder: Your name
+              autofocus: on
+              autocomplete: on
+              type: text
+              validate:
+                required: true
+
+            - name: email
+              label: Email
+              outerclasses: contact_form__columns__col__email
+              id: contact_form__email
+              placeholder: Enter your email address
+              type: email
+              validate:
+                required: true
+
+            - name: phone
+              label: Phone
+              outerclasses: contact_form__columns__col__phone
+              id: contact_form__phone
+              placeholder: Your phone
+              autofocus: on
+              autocomplete: on
+              type: text
+              validate:
+                required: true
+
+          column2:
+            type: column
+            classes: contact_form__columns__col contact_form__columns__col--second
+            fields:
+            - name: message
+              label: Message
+              outerclasses: contact_form__columns__col__message
+              id: contact_form__message
+              placeholder: Type your message here...
+              autofocus: on
+              autocomplete: on
+              type: text
+              validate:
+                required: true
+
+    buttons:
+        - type: submit
+          value: Submit
+          id: contact_form__submit
+
+    process:
+        - email:
+            from: "{{ config.plugins.email.from }}"
+            to:
+              - "{{ config.plugins.email.to }}"
+              - "{{ form.value.email }}"
+            subject: "[Feedback] {{ form.value.name|e }}"
+            body: "{% include 'forms/data.html.twig' %}"
+        - save:
+            fileprefix: feedback-
+            dateformat: Ymd-His-u
+            extension: txt
+            body: "{% include 'forms/data.txt.twig' %}"
+        - message: Thank you for your feedback!
+        - display: thankyou
+---
+
+## Let's talk about your project
+</code></pre>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form
+        name=""
+    action="/contact/_form"
+    method="POST"
+                  class=" ">
+        
+            
+
+    <input type="hidden" name="__form-name__" value="" />
+            <input type="hidden" name="__unique_form_id__" value="DsFCOc61hylRmr879GwM" />
+    <input type="hidden" name="form-nonce" value="653ce1801abe5cb4a91f208a42301506" />
+
+      
+            <div class="buttons">
+  
+
+    
+        </div>
+  
+  </form>
+
+</div>";s:12:"content_meta";N;}

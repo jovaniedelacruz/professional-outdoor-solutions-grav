@@ -241,6 +241,6 @@ class __TwigTemplate_42219f46d8168c84ecb29587c47c3123ddf27d9dc6b742d57eccf30b423
         {{ nonce_field('admin-form', 'admin-nonce')|raw }}
     {% endif %}
 </form>
-", "partials/blueprints.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\blueprints.html.twig");
+", "partials/blueprints.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\blueprints.html.twig");
     }
 }

@@ -1,0 +1,44 @@
+1598844487
+a:2:{s:7:"content";s:863:"<div class="triple-cards white-margin">
+
+      <a href="commercial">
+  <div class="triple-cards__entry">
+    <div class="triple-cards__entry__thumbnail gray-reveal">
+      <img src="/user/pages/01.home/_cards/commercial/golf-field.jpg">
+      <h3>
+        Commercial
+      </h3>
+
+    </div>
+
+  </div>
+
+</a>
+      <a href="athletic">
+  <div class="triple-cards__entry">
+    <div class="triple-cards__entry__thumbnail gray-reveal">
+      <img src="/user/pages/01.home/_cards/athletic/homepage-athletic-SJO-0096.jpg">
+      <h3>
+        Athletic
+      </h3>
+
+    </div>
+
+  </div>
+
+</a>
+      <a href="residential">
+  <div class="triple-cards__entry">
+    <div class="triple-cards__entry__thumbnail gray-reveal">
+      <img src="/user/pages/01.home/_cards/residential/norem-august.jpg">
+      <h3>
+        Residential
+      </h3>
+
+    </div>
+
+  </div>
+
+</a>
+  </div>
+";s:12:"content_meta";N;}

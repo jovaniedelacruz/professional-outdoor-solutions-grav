@@ -215,6 +215,6 @@ class __TwigTemplate_2555d9e7d036b0e39fda224ac5ea3f4e5f78b2b01b854b3ac00eb73cd07
     {% endif %}
 </ul>
 
-", "partials/nav-quick-tray.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-quick-tray.html.twig");
+", "partials/nav-quick-tray.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-quick-tray.html.twig");
     }
 }

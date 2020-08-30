@@ -116,6 +116,6 @@ class __TwigTemplate_887be930b131d57d5c4905d2bee1595f7ada6c2924077bb16ed9d2eed73
         </div>
     </a>
 </div>
-", "partials/nav-user-details.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-user-details.html.twig");
+", "partials/nav-user-details.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\nav-user-details.html.twig");
     }
 }
