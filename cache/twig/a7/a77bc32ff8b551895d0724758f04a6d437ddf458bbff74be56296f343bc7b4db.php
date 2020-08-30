@@ -623,6 +623,6 @@ class __TwigTemplate_997c7f296cf0213d2e2c947e52e346c59da7bd353c7c983d9fd363b0c4f
     {% endblock body %}
     </html>
 {% endif %}
-", "partials/base-root.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\base-root.html.twig");
+", "partials/base-root.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\base-root.html.twig");
     }
 }

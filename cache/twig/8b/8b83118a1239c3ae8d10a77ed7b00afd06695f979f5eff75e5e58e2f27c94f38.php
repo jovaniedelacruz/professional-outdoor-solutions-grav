@@ -283,6 +283,6 @@ class __TwigTemplate_245998c4ce29b7d6ca18850ccd987249c246d87ce3d172a72f27e707153
         </div>
 
     </form>
-</div>", "partials/modal-add-package.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-add-package.html.twig");
+</div>", "partials/modal-add-package.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\modal-add-package.html.twig");
     }
 }

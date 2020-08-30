@@ -1,85 +1,85 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1596672451,
-    'checksum' => '3240a108ba9db61333be6ead16e698a6',
+    'timestamp' => 1592449519,
+    'checksum' => '6fbcfe07c8b69249ba004967a9bdb45b',
     'files' => [
         'user/plugins/admin/blueprints/config' => [
             'media' => [
                 'file' => 'user/plugins/admin/blueprints/config/media.yaml',
-                'modified' => 1592787545
+                'modified' => 1592449334
             ]
         ],
         'system/blueprints/config' => [
             'backups' => [
                 'file' => 'system/blueprints/config/backups.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'scheduler' => [
                 'file' => 'system/blueprints/config/scheduler.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'security' => [
                 'file' => 'system/blueprints/config/security.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
-                'modified' => 1592787534
+                'modified' => 1592449334
             ],
-            'plugins/assets' => [
-                'file' => 'user/plugins/assets/blueprints.yaml',
-                'modified' => 1594787353
+            'plugins/admin-addon-user-manager' => [
+                'file' => 'user/plugins/admin-addon-user-manager/blueprints.yaml',
+                'modified' => 1592449378
+            ],
+            'plugins/bootstrapper' => [
+                'file' => 'user/plugins/bootstrapper/blueprints.yaml',
+                'modified' => 1586110184
             ],
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/blueprints.yaml',
-                'modified' => 1592787967
+                'modified' => 1586108430
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1592787520
+                'modified' => 1592449360
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1596672132
+                'modified' => 1586072459
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1596672402
+                'modified' => 1592449348
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1592787512
+                'modified' => 1592449352
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/blueprints.yaml',
-                'modified' => 1592787520
-            ],
-            'plugins/pagination' => [
-                'file' => 'user/plugins/pagination/blueprints.yaml',
-                'modified' => 1592956638
+                'modified' => 1586072469
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1592787505
+                'modified' => 1586072457
             ]
         ]
     ],
@@ -3096,26 +3096,202 @@ return [
                 'name' => 'plugins.admin.popularity.history.visitors',
                 'validation' => 'loose'
             ],
-            'plugins.assets' => [
+            'plugins.admin-addon-user-manager' => [
                 'type' => '_root',
                 'form_field' => false,
                 'form' => [
                     'validation' => 'strict'
                 ]
             ],
-            'plugins.assets.enabled' => [
+            'plugins.admin-addon-user-manager.enabled' => [
                 'type' => 'toggle',
-                'label' => 'Plugin status',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
                 'highlight' => 1,
                 'default' => 0,
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.assets.enabled',
+                'name' => 'plugins.admin-addon-user-manager.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-addon-user-manager.default_list_style' => [
+                'label' => 'PLUGIN_ADMIN_ADDON_USER_MANAGER.DEFAULT_LIST_STYLE',
+                'type' => 'select',
+                'options' => [
+                    'grid' => 'PLUGIN_ADMIN_ADDON_USER_MANAGER.GRID',
+                    'list' => 'PLUGIN_ADMIN_ADDON_USER_MANAGER.LIST'
+                ],
+                'name' => 'plugins.admin-addon-user-manager.default_list_style',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-addon-user-manager.pagination' => [
+                'type' => '_parent',
+                'name' => 'plugins.admin-addon-user-manager.pagination',
+                'form_field' => false
+            ],
+            'plugins.admin-addon-user-manager.pagination.per_page' => [
+                'label' => 'PLUGIN_ADMIN_ADDON_USER_MANAGER.USERS_PER_PAGE',
+                'type' => 'select',
+                'options' => [
+                    10 => 10,
+                    20 => 20,
+                    30 => 30,
+                    40 => 40,
+                    50 => 50,
+                    60 => 60,
+                    70 => 70,
+                    80 => 80,
+                    90 => 90,
+                    100 => 100
+                ],
+                'name' => 'plugins.admin-addon-user-manager.pagination.per_page',
+                'validation' => 'strict'
+            ],
+            'plugins.admin-addon-user-manager.custom_permissions' => [
+                'label' => 'PLUGIN_ADMIN_ADDON_USER_MANAGER.CUSTOM_PERMISSIONS',
+                'type' => 'array',
+                'value_only' => true,
+                'name' => 'plugins.admin-addon-user-manager.custom_permissions',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.bootstrapper.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.version' => [
+                'type' => 'select',
+                'size' => 'small',
+                'label' => 'PLUGIN_BOOTSTRAPPER.VERSION',
+                'default' => 'v3',
+                'options' => [
+                    'v3' => 'Bootstrap v3.3.7',
+                    'v4' => 'Bootstrap v4.1.1'
+                ],
+                'name' => 'plugins.bootstrapper.version',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.always_load' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.ALWAYS_LOAD',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.always_load',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.use_cdn' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.USE_CDN',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.use_cdn',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.mode' => [
+                'type' => 'select',
+                'size' => 'small',
+                'label' => 'PLUGIN_BOOTSTRAPPER.MODE',
+                'default' => 'production',
+                'options' => [
+                    'development' => 'Development',
+                    'production' => 'Production'
+                ],
+                'name' => 'plugins.bootstrapper.mode',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.load_core_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.LOAD_CORE_CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.load_core_css',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.load_theme_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.LOAD_THEME_CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.load_theme_css',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.load_popper_js' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.LOAD_POPPER_JS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.load_popper_js',
+                'validation' => 'strict'
+            ],
+            'plugins.bootstrapper.load_core_js' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_BOOTSTRAPPER.LOAD_CORE_JS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.bootstrapper.load_core_js',
                 'validation' => 'strict'
             ],
             'plugins.devtools' => [
@@ -4249,55 +4425,6 @@ return [
                 'name' => 'plugins.markdown-notices.level_classes',
                 'validation' => 'strict'
             ],
-            'plugins.pagination' => [
-                'type' => '_root',
-                'form_field' => false,
-                'form' => [
-                    'validation' => 'strict'
-                ]
-            ],
-            'plugins.pagination.enabled' => [
-                'type' => 'toggle',
-                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.pagination.enabled',
-                'validation' => 'strict'
-            ],
-            'plugins.pagination.delta' => [
-                'type' => 'number',
-                'size' => 'x-small',
-                'label' => 'PLUGIN_PAGINATION.DELTA',
-                'default' => 0,
-                'validate' => [
-                    'type' => 'number',
-                    'min' => 0
-                ],
-                'name' => 'plugins.pagination.delta',
-                'validation' => 'strict'
-            ],
-            'plugins.pagination.built_in_css' => [
-                'type' => 'toggle',
-                'label' => 'PLUGIN_PAGINATION.BUILTIN_CSS',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.pagination.built_in_css',
-                'validation' => 'strict'
-            ],
             'plugins.problems' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -4677,8 +4804,24 @@ return [
                         'days_of_stats' => 'plugins.admin.dashboard.days_of_stats'
                     ]
                 ],
-                'assets' => [
-                    'enabled' => 'plugins.assets.enabled'
+                'admin-addon-user-manager' => [
+                    'enabled' => 'plugins.admin-addon-user-manager.enabled',
+                    'default_list_style' => 'plugins.admin-addon-user-manager.default_list_style',
+                    'pagination' => [
+                        'per_page' => 'plugins.admin-addon-user-manager.pagination.per_page'
+                    ],
+                    'custom_permissions' => 'plugins.admin-addon-user-manager.custom_permissions'
+                ],
+                'bootstrapper' => [
+                    'enabled' => 'plugins.bootstrapper.enabled',
+                    'version' => 'plugins.bootstrapper.version',
+                    'always_load' => 'plugins.bootstrapper.always_load',
+                    'use_cdn' => 'plugins.bootstrapper.use_cdn',
+                    'mode' => 'plugins.bootstrapper.mode',
+                    'load_core_css' => 'plugins.bootstrapper.load_core_css',
+                    'load_theme_css' => 'plugins.bootstrapper.load_theme_css',
+                    'load_popper_js' => 'plugins.bootstrapper.load_popper_js',
+                    'load_core_js' => 'plugins.bootstrapper.load_core_js'
                 ],
                 'devtools' => [
                     'enabled' => 'plugins.devtools.enabled',
@@ -4803,11 +4946,6 @@ return [
                     'built_in_css' => 'plugins.markdown-notices.built_in_css',
                     'base_classes' => 'plugins.markdown-notices.base_classes',
                     'level_classes' => 'plugins.markdown-notices.level_classes'
-                ],
-                'pagination' => [
-                    'enabled' => 'plugins.pagination.enabled',
-                    'delta' => 'plugins.pagination.delta',
-                    'built_in_css' => 'plugins.pagination.built_in_css'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',

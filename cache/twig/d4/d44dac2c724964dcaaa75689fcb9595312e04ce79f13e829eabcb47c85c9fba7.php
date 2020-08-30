@@ -228,6 +228,6 @@ class __TwigTemplate_0ee366dc5d89ec144fd7ae7eedfdea061b93d4b5953bb0d298937f62bee
     {% endfor %}
 </script>
 {% endif %}
-", "partials/javascript-config.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\javascript-config.html.twig");
+", "partials/javascript-config.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\javascript-config.html.twig");
     }
 }

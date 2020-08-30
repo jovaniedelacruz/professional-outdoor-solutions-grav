@@ -60,6 +60,6 @@ class __TwigTemplate_a809ce552a61ce2c702c53469ae82ec3dfae81283881dc0233242288688
     public function getSourceContext()
     {
         return new Source("{% extends 'partials/base-root.html.twig' %}
-", "partials/base.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\base.html.twig");
+", "partials/base.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\base.html.twig");
     }
 }

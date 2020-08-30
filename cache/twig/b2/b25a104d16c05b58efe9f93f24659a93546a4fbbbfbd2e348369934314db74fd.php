@@ -372,6 +372,6 @@ class __TwigTemplate_207b07a18300bfec85d96e04a7ee9ba6923e3e488ecd3fea5dca1a6641c
         {% endif %}
     </div>
 {% endblock %}
-", "plugins.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\plugins.html.twig");
+", "plugins.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\plugins.html.twig");
     }
 }

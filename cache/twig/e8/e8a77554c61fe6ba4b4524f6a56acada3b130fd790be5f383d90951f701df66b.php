@@ -150,6 +150,6 @@ class __TwigTemplate_5040e9be8837958483e8e8eab7699ed8344d73fd3d863c7625ce9fbafd7
   }
   checkjs();
 </script>
-", "partials/noscript.html.twig", "C:\\Users\\Jovanie\\Documents\\Web_Development\\professional-outdoor-solutions\\professional-outdoor-solutions-grav-dev\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\noscript.html.twig");
+", "partials/noscript.html.twig", "C:\\Users\\Jovanie\\Documents\\GitHub\\professional-outdoor-solutions-grav\\user\\plugins\\admin\\themes\\grav\\templates\\partials\\noscript.html.twig");
     }
 }

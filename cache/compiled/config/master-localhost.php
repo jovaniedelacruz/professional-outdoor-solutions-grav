@@ -1,117 +1,109 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1596672451,
-    'checksum' => '0cae00f1fc87fad585d51ed97ec93113',
+    'timestamp' => 1592449519,
+    'checksum' => '052b2ab6bf5bdab33e6c74a02841f7d9',
     'files' => [
         'user/config' => [
             'backups' => [
                 'file' => 'user/config/backups.yaml',
-                'modified' => 1592787624
+                'modified' => 1586073523
             ],
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1592787624
+                'modified' => 1586073523
             ],
-            'plugins/email' => [
-                'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1596672451
-            ],
-            'plugins/form' => [
-                'file' => 'user/config/plugins/form.yaml',
-                'modified' => 1596671645
-            ],
-            'plugins/pagination' => [
-                'file' => 'user/config/plugins/pagination.yaml',
-                'modified' => 1592957522
+            'plugins/login' => [
+                'file' => 'user/config/plugins/login.yaml',
+                'modified' => 1592449519
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
-                'modified' => 1592787624
+                'modified' => 1586073523
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1592787623
+                'modified' => 1586072918
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1592787559
+                'modified' => 1586107598
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1592787624
+                'modified' => 1586073523
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1596672403
+                'modified' => 1592449171
             ]
         ],
         'system/config' => [
             'backups' => [
                 'file' => 'system/config/backups.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1591774632
+                'modified' => 1592436689
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1592787534
+                'modified' => 1592449334
             ],
-            'plugins/assets' => [
-                'file' => 'user/plugins/assets/assets.yaml',
-                'modified' => 1594787353
+            'plugins/admin-addon-user-manager' => [
+                'file' => 'user/plugins/admin-addon-user-manager/admin-addon-user-manager.yaml',
+                'modified' => 1592449378
+            ],
+            'plugins/bootstrapper' => [
+                'file' => 'user/plugins/bootstrapper/bootstrapper.yaml',
+                'modified' => 1586110185
             ],
             'plugins/devtools' => [
                 'file' => 'user/plugins/devtools/devtools.yaml',
-                'modified' => 1592787967
+                'modified' => 1586108430
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1592787520
+                'modified' => 1592449360
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1596672132
+                'modified' => 1586072459
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1596672402
+                'modified' => 1592449348
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1592787512
+                'modified' => 1592449353
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1592787520
-            ],
-            'plugins/pagination' => [
-                'file' => 'user/plugins/pagination/pagination.yaml',
-                'modified' => 1592956638
+                'modified' => 1586072469
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1592787505
+                'modified' => 1586072457
             ]
         ]
     ],
@@ -182,8 +174,23 @@ return [
                     ]
                 ]
             ],
-            'assets' => [
-                'enabled' => true
+            'admin-addon-user-manager' => [
+                'enabled' => true,
+                'default_list_style' => 'list',
+                'pagination' => [
+                    'per_page' => 20
+                ]
+            ],
+            'bootstrapper' => [
+                'enabled' => true,
+                'version' => 'v3',
+                'always_load' => false,
+                'use_cdn' => false,
+                'mode' => 'production',
+                'load_core_css' => true,
+                'load_theme_css' => true,
+                'load_popper_js' => true,
+                'load_core_js' => true
             ],
             'devtools' => [
                 'enabled' => true,
@@ -191,9 +198,9 @@ return [
             ],
             'email' => [
                 'enabled' => true,
-                'from' => 'jovaniedelacruz@gmail.com',
+                'from' => NULL,
                 'from_name' => NULL,
-                'to' => 'jovaniedelacruz@gmail.com',
+                'to' => NULL,
                 'to_name' => NULL,
                 'queue' => [
                     'enabled' => false,
@@ -207,22 +214,15 @@ return [
                         'server' => 'localhost',
                         'port' => 25,
                         'encryption' => 'none',
-                        'user' => NULL,
-                        'password' => NULL
+                        'user' => '',
+                        'password' => ''
                     ],
                     'sendmail' => [
                         'bin' => '/usr/sbin/sendmail -bs'
                     ]
                 ],
                 'content_type' => 'text/html',
-                'debug' => false,
-                'charset' => NULL,
-                'cc' => NULL,
-                'cc_name' => NULL,
-                'bcc' => NULL,
-                'reply_to' => NULL,
-                'reply_to_name' => NULL,
-                'body' => NULL
+                'debug' => false
             ],
             'error' => [
                 'enabled' => true,
@@ -234,7 +234,7 @@ return [
                 'enabled' => true,
                 'built_in_css' => true,
                 'inline_css' => true,
-                'refresh_prevention' => true,
+                'refresh_prevention' => false,
                 'client_side_validation' => true,
                 'inline_errors' => false,
                 'files' => [
@@ -281,9 +281,9 @@ return [
                     'name' => 'grav-rememberme'
                 ],
                 'max_pw_resets_count' => 2,
-                'max_pw_resets_interval' => 60,
-                'max_login_count' => 5,
-                'max_login_interval' => 10,
+                'max_pw_resets_interval' => 30,
+                'max_login_count' => 10,
+                'max_login_interval' => 1,
                 'ipv6_subnet_size' => 64,
                 'user_registration' => [
                     'enabled' => false,
@@ -304,8 +304,8 @@ return [
                             'login' => 'true'
                         ]
                     ],
-                    'redirect_after_registration' => '',
-                    'redirect_after_activation' => '',
+                    'redirect_after_registration' => NULL,
+                    'redirect_after_activation' => NULL,
                     'options' => [
                         'validate_password1_and_password2' => true,
                         'set_user_disabled' => false,
@@ -327,11 +327,6 @@ return [
                     2 => 'blue',
                     3 => 'green'
                 ]
-            ],
-            'pagination' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'delta' => 0
             ],
             'problems' => [
                 'enabled' => true,
@@ -677,14 +672,14 @@ node_modules'
                 3 => 'js',
                 4 => 'exe'
             ],
-            'salt' => 'eEDvOLpsH3muk0'
+            'salt' => 'MnJfbCU43KyaHA'
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'Professional Outdoor Solutions',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@example.com'
+                'name' => 'Jovanie De La Cruz',
+                'email' => 'jovaniedelacruz@gmail.com'
             ],
             'taxonomies' => [
                 0 => 'category',
@@ -763,7 +758,7 @@ node_modules'
                 'hide_in_urls' => false
             ],
             'pages' => [
-                'theme' => 'professional-outdoor-solutions-grav-theme',
+                'theme' => 'professional-outdoor-solutions',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -774,7 +769,7 @@ node_modules'
                 'dateformat' => [
                     'default' => NULL,
                     'short' => 'F jS \\a\\t g:ia',
-                    'long' => 'l jS \\of F g:i A'
+                    'long' => 'F jS \\a\\t g:ia'
                 ],
                 'publish_dates' => true,
                 'process' => [
@@ -830,7 +825,7 @@ node_modules'
                     1 => '.idea'
                 ],
                 'ignore_hidden' => true,
-                'hide_empty_folders' => false,
+                'hide_empty_folders' => NULL,
                 'url_taxonomy_filters' => true,
                 'frontmatter' => [
                     'process_twig' => false,
@@ -914,7 +909,7 @@ node_modules'
             ],
             'images' => [
                 'default_image_quality' => 85,
-                'cache_all' => false,
+                'cache_all' => true,
                 'cache_perms' => '0755',
                 'debug' => false,
                 'auto_fix_orientation' => false,
